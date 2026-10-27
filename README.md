@@ -51,6 +51,7 @@ Ohne Secrets läuft nur der Build, der Deploy-Schritt warnt und endet.
 
 Die Domains `einsatzleitwagen.app` und `www.einsatzleitwagen.app` sind im Pages-Projekt `elvis-homepage` als
 Custom Domains eingetragen. Die Zone liegt im selben Cloudflare-Konto, DNS und Zertifikat verwaltet Cloudflare.
+`functions/_middleware.js` leitet `www` dauerhaft (301) auf die Adresse ohne `www` um.
 
 ## Lizenz
 
