@@ -1,0 +1,4 @@
+# Projekthomepage von ELVIS. Erreichbar unter https://einsatzleitwagen.app (Custom Domain im Pages-Projekt)
+name = "elvis-homepage"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-09-01"
