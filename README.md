@@ -1,9 +1,17 @@
 # ELVIS – Projekthomepage
 
 Quelle der Seite **<https://einsatzleitwagen.app>**: Vorstellung von [ELVIS](https://github.com/tel-diepholz/elvis),
-der Software für den Einsatzleitwagen, mit Funktionen, Bildern, App-Anbindung und Installation.
+der Software für den Einsatzleitwagen, mit Funktionen, Bildern, App-Anbindung, E-Mail und Installation, dazu die
+**Statusseite** <https://einsatzleitwagen.app/status> für Mail-Dienst und Cloud-Relay.
 
-Eine einzelne Seite mit React und Vite, gehostet auf **Cloudflare Pages** (kostenlos, HTTPS).
+Zwei Seiten mit React und Vite (`index.html`, `status/index.html`), gehostet auf **Cloudflare Pages** (kostenlos, HTTPS).
+
+## Statusseite
+
+`/status` und der Störungshinweis oben auf der Startseite lesen `GET /v1/status` des Relays (Adresse in `src/links.ts`).
+Die Startseite zeigt den Hinweis nur, wenn der Gesamtstatus nicht „ok“ ist oder das Relay nicht antwortet. Prüfungen und
+Störungsmeldungen pflegt das Relay (siehe README von elvis-relay). Gegen ein lokales Relay:
+`VITE_RELAY_URL=http://localhost:8787 npm run dev`.
 
 ## Entwickeln
 
@@ -15,7 +23,8 @@ npm run preview    # gebaute Seite ansehen
 ```
 
 ```
-src/sections/       Abschnitte der Seite: Header, Hero, Features, Screenshots, Ecosystem, Install, Footer
+src/sections/       Abschnitte der Seite: StatusBanner, Header, Hero, Features, Screenshots, Ecosystem, Mail, Install, Footer
+src/status/         Statusseite (/status)
 src/styles.css      Farben als CSS-Variablen, Hell/Dunkel nach Systemeinstellung
 public/screenshots/ Bilder aus dem Simulationsmodus von ELVIS (WebP, 1440 × 900)
 public/_headers     Cache-Header für Cloudflare Pages

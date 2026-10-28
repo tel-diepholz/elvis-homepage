@@ -27,7 +27,7 @@ function Code({ children }: { children: string }) {
 
 export function Install() {
   return (
-    <section className="section section-alt" id="installation">
+    <section className="section" id="installation">
       <div className="wrap">
         <h2>Installation</h2>
         <p className="section-lead">
