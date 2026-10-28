@@ -2,17 +2,18 @@ import { Github } from 'lucide-react';
 import { GITHUB } from '../links';
 
 const NAV = [
-  ['#funktionen', 'Funktionen'],
-  ['#bilder', 'Bilder'],
-  ['#oekosystem', 'App & Relay'],
-  ['#installation', 'Installation'],
+  ['/#funktionen', 'Funktionen'],
+  ['/#bilder', 'Bilder'],
+  ['/#oekosystem', 'App & Relay'],
+  ['/#mail', 'E-Mail'],
+  ['/#installation', 'Installation'],
 ] as const;
 
 export function Header() {
   return (
     <header className="header">
       <div className="wrap header-inner">
-        <a className="brand" href="#top" aria-label="ELVIS, zum Seitenanfang">
+        <a className="brand" href="/#top" aria-label="ELVIS, zum Seitenanfang">
           <img src="/favicon.svg" alt="" width="28" height="28" />
           <span>ELVIS</span>
         </a>

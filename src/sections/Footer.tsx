@@ -13,6 +13,7 @@ export function Footer() {
           <a href={GITHUB_APP}>App</a>
           <a href={GITHUB_RELAY}>Relay</a>
           <a href={GITHUB_HOMEPAGE}>Diese Seite</a>
+          <a href="/status">Status</a>
         </nav>
       </div>
     </footer>

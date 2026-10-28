@@ -1,6 +1,7 @@
 import type { LucideIcon } from 'lucide-react';
 import {
   Archive,
+  AtSign,
   BookLock,
   Boxes,
   CloudSun,
@@ -115,6 +116,11 @@ const GROUPS: { title: string; intro: string; items: Feature[] }[] = [
         icon: Printer,
         title: 'Drucken und Scannen',
         text: 'Drucker über das CUPS-Addon, Scans kommen per „Scan an E-Mail“ direkt in ELVIS an.',
+      },
+      {
+        icon: AtSign,
+        title: 'Verschlüsseltes Postfach',
+        text: 'Eine eigene Adresse …@einsatzleitwagen.app für den ELW, direkt in ELVIS. OpenPGP ist Standard: der private Schlüssel bleibt im Fahrzeug.',
       },
       {
         icon: KeyRound,
